@@ -8,7 +8,15 @@
 
 // Write the function to find the findDigit obtained.
 var findDigit = function(num, nth){
-     //your code here
+  num = num + "";
+	var num_rev=num.split("").reverse().join("");
+  var r = num_rev.toString().split('')[nth-1]*1;
+  if(nth<0)
+   return -1;
+   if(num.length<nth)
+   return 0;
+   else
+   return r;
   }
 
 //Use SpecRunner to check the Test Cases.
